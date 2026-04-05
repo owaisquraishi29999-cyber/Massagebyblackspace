@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BLK | Premium Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --card-bg: #111111;
+            --accent-gold: #d4af37;
+            --accent-gold-bright: #f1c40f;
+            --text-main: #ffffff;
+            --text-dim: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        header {
+            margin: 50px 0 40px 0;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 12px;
+            margin-bottom: 5px;
+            text-indent: 12px;
+        }
+
+        .tagline {
+            color: var(--accent-gold);
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        /* --- Updated VIP Buttons Section --- */
+        .vip-container {
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-gold {
+            display: block;
+            background: linear-gradient(135deg, #d4af37 0%, #f1c40f 50%, #b8860b 100%);
+            color: #000;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-outline {
+            display: block;
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-gold:active, .btn-outline:active {
+            transform: scale(0.97);
+        }
+
+        /* Animation for the main VIP button */
+        .pulse {
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        /* --- Sections --- */
+        .section-label {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-label::before, .section-label::after {
+            content: "";
+            height: 1px;
+            width: 30px;
+            background: #333;
+            margin: 0 15px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #1a1a1a;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 15px;
+            text-align: left;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: var(--accent-gold);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .fee {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .travel-box {
+            background: #000;
+            border: 1px dashed #444;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 35px;
+        }
+
+        .travel-item {
+            display: block;
+            margin: 10px 0;
+            font-size: 0.95rem;
+            color: #fff;
+        }
+
+        .travel-item span {
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .btn-book {
+            display: block;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            transition: transform 0.2s ease;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.6rem;
+            color: #444;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>BLK</h1>
+            <p class="tagline">Bookings • Travel • VIP Access</p>
+        </header>
+
+        <div class="vip-container">
+            <a href="https://onlyfans.com/blackmassagetv" class="btn-gold pulse">VIP</a>
+            <a href="https://onlyfans.com/blackmassagetv" class="btn-outline">FREE EXCLUSIVES</a>
+        </div>
+
+        <div class="section-label">Services</div>
+
+        <div class="card">
+            <h3>Therapeutic</h3>
+            <p>Deep Tissue / Sports Targeted Recovery</p>
+            <div class="price-row">
+                <span class="price">$120/hr</span>
+                <span class="fee">+$30 Outcall</span>
+            </div>
+        </div>
+
+        <a href="https://onlyfans.com/blackmassagetv" class="card" style="border-color: #333;">
+            <h3>Premium</h3>
+            <p>Full Body High-End Massage Experience</p>
+            <div class="price-row">
+                <span class="price">$250/hr</span>
+                <span class="fee">+$50 Outcall</span>
+            </div>
+            <p style="font-size: 0.65rem; color: var(--accent-gold); margin-top: 10px; letter-spacing: 1px;">VIEW DETAILS →</p>
+        </a>
+
+        <div class="card">
+            <h3>VIP Signature</h3>
+            <p>The Ultimate Luxury Relaxation Tier</p>
+            <div class="price-row">
+                <span class="price">$300/hr</span>
+                <span class="fee">+$50 Outcall</span>
+            </div>
+        </div>
+
+        <div class="section-label">Travel & Hosting</div>
+        <div class="travel-box">
+            <div class="travel-item">Domestic: <span>$1,500/night</span></div>
+            <div class="travel-item">International: <span>$3,000/night</span></div>
+        </div>
+
+        <a href="sms:13059006958" class="btn-book">BOOK NOW</a>
+
+        <footer>
+            &copy; 2026 BLK AGENCY. ALL RIGHTS RESERVED.
+        </footer>
+    </div>
+
+</body>
+</html>
